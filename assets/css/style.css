@@ -64,3 +64,10 @@ body {
 .operator {
     background-color: grey;
 }
+
+/*results texts*/
+.result {
+    font-size: 30px;
+    margin-right: 10px;
+    text-align: right;
+}
