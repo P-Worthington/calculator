@@ -5,7 +5,7 @@ document.getElementById("close-bracket").addEventListener("click", function() {
     addToCalc(")");
 });
 document.getElementById("clear").addEventListener("click", function() {
-    clear("c");
+    clear();
 });
 document.getElementById("ac").addEventListener("click", function() {
     clearAll();
@@ -66,11 +66,9 @@ function clearAll () {
 function clear() {
     let content = document.getElementById("result-text").innerHTML
     let resultArray = content.split('');
-    console.log(resultArray);
     resultArray.splice(-1, 1);
     let resultArrayStr = resultArray.toString();
     let resultArrayStrNoComma = resultArrayStr.replace(/,/g, "");
-    console.log(resultArrayStrNoComma);
     document.getElementById("result-text").innerHTML = resultArrayStrNoComma;
 
 }
@@ -80,8 +78,21 @@ function operandAssesment (a) {
 }
 
 function addToCalc(a) {
-    let result = document.getElementById("result-text");
-    let input = document.createTextNode(a);
+    let maxCheck = checkMaximum()
+    if (maxCheck === "notFull") {
+        let result = document.getElementById("result-text");
+        let input = document.createTextNode(a);
+        result.appendChild(input);
+    }
+}
 
-    result.appendChild(input);
+function checkMaximum () {
+    resultList = document.getElementById("result-text").innerHTML;
+    let resultArray = resultList.split('');
+    let length = resultArray.length
+    if (length <= 25) {
+        let result = "notFull";
+        return result;
+    }
+
 }
