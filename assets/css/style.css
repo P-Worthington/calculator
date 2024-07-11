@@ -4,13 +4,15 @@ body {
 
 /*background*/
 .background {
-    background-color: grey;
+    background-color: lightblue;
     width: 550px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 5px black;
 }
 
 /*header*/
@@ -20,7 +22,7 @@ body {
 
 /*container*/
 .calculator {
-    background-color: grey;
+    background-color: lightblue;
     width: 500px;
     margin-left: auto;
     margin-right: auto;
@@ -30,7 +32,10 @@ body {
 .result-row {
     background-color: white;
     border: 5px solid red;
+    box-shadow: 3px 5px black;
     height: 90px;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 /*calculator button properties*/
@@ -44,4 +49,18 @@ body {
     width: 25%;
     height: 50px;
     font-size: 20px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.ac-button {
+    background-color: lightcoral;
+}
+
+.equals-button {
+    background-color: aquamarine;
+}
+
+.operator {
+    background-color: grey;
 }
