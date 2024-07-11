@@ -4,11 +4,11 @@ document.getElementById("open-bracket").addEventListener("click", function() {
 document.getElementById("close-bracket").addEventListener("click", function() {
     addToCalc(")");
 });
-document.getElementById("percent").addEventListener("click", function() {
-    addToCalc("%");
+document.getElementById("clear").addEventListener("click", function() {
+    clear("c");
 });
 document.getElementById("ac").addEventListener("click", function() {
-    clear();
+    clearAll();
 });
 document.getElementById("7").addEventListener("click", function() {
     addToCalc("7");
@@ -59,11 +59,29 @@ document.getElementById("plus").addEventListener("click", function() {
     addToCalc("+");
 });
 
-function clear () {
+function clearAll () {
     document.getElementById("result-text").innerHTML = "";
 }
 
+function clear() {
+    let content = document.getElementById("result-text").innerHTML
+    let resultArray = content.split('');
+    console.log(resultArray);
+    resultArray.splice(-1, 1);
+    let resultArrayStr = resultArray.toString();
+    let resultArrayStrNoComma = resultArrayStr.replace(/,/g, "");
+    console.log(resultArrayStrNoComma);
+    document.getElementById("result-text").innerHTML = resultArrayStrNoComma;
+
+}
+
+function operandAssesment (a) {
+
+}
+
 function addToCalc(a) {
-    text = document.getElementById("result-text").innerHTML;
-    document.getElementById("result-text").innerHTML = text + a;
+    let result = document.getElementById("result-text");
+    let input = document.createTextNode(a);
+
+    result.appendChild(input);
 }
