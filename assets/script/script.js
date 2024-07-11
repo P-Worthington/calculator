@@ -8,7 +8,7 @@ document.getElementById("percent").addEventListener("click", function() {
     addToCalc("%");
 });
 document.getElementById("ac").addEventListener("click", function() {
-    addToCalc("ac");
+    clear();
 });
 document.getElementById("7").addEventListener("click", function() {
     addToCalc("7");
@@ -59,8 +59,11 @@ document.getElementById("plus").addEventListener("click", function() {
     addToCalc("+");
 });
 
+function clear () {
+    document.getElementById("result-text").innerHTML = "";
+}
 
-  function addToCalc(a) {
+function addToCalc(a) {
     text = document.getElementById("result-text").innerHTML;
     document.getElementById("result-text").innerHTML = text + a;
-  }
+}
