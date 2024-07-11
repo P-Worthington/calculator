@@ -76,11 +76,8 @@ function clear() {
 function operandAssesment (a) {
     let results = document.getElementById("result-text").innerHTML;
     let resultsList = results.split('');
-    let lastItem = resultsList.pop();
-    console.log(lastItem)
-    console.log(a)
-    if (lastItem == 1 || 2 || 3 || 4 || 5 || 6 || 7 || 8 || 9 || 0 || "(" || ")") {
-        console.log("hello")
+    let x = resultsList.pop();
+    if (x === "1" || x === "2" || x === "3" || x === "4" || x === "5" || x === "6" || x === "7" || x === "8" || x === "9" || x === "0" || x === "(" || x === ")") {
         addToCalc(a)
     }
 
