@@ -67,12 +67,15 @@ function clearAll () {
 
 function clear() {
     let content = document.getElementById("result-text").innerHTML
-    let resultArray = content.split('');
-    resultArray.splice(-1, 1);
-    let resultArrayStr = resultArray.toString();
-    let resultArrayStrNoComma = resultArrayStr.replace(/,/g, "");
-    document.getElementById("result-text").innerHTML = resultArrayStrNoComma;
-
+    if (content === "Syntax Error") {
+        clearAll();
+    } else {
+        let resultArray = content.split('');
+        resultArray.splice(-1, 1);
+        let resultArrayStr = resultArray.toString();
+        let resultArrayStrNoComma = resultArrayStr.replace(/,/g, "");
+        document.getElementById("result-text").innerHTML = resultArrayStrNoComma;
+    }
 }
 
 function calculate () {
@@ -113,6 +116,8 @@ function checkMaximum () {
     if (length <= 25) {
         let result = "notFull";
         return result;
+    } else {
+        alert("Calculator full. Press C to delete single item ot AC to delete all.");
     }
 
 }
