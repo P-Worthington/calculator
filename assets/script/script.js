@@ -1,4 +1,5 @@
 
+
 // event listeners for calculator buttons
 document.getElementById("open-bracket").addEventListener("click", function() {
     addToCalc("(");
@@ -67,7 +68,7 @@ document.getElementById("clear-history").addEventListener("click", function() {
 //function used to clear all history from users inputs
 function clearHistory() {
     // clears history id 
-    let history = document.getElementById("history");
+    var history = document.getElementById("history");
     history.textContent = "";
 }
 
@@ -78,19 +79,19 @@ function clearAll () {
 
 //clears the last item typed on the calculator screen
 function clear() {
-    let content = document.getElementById("result-text").innerHTML
+    var content = document.getElementById("result-text").innerHTML;
     //clears all of output is syntax error
     if (content === "Syntax Error") {
         clearAll();
     } else {
         //split into array
-        let resultArray = content.split('');
+        var resultArray = content.split('');
         //splice last item
         resultArray.splice(-1, 1);
         //turns array back to string
-        let resultArrayStr = resultArray.toString();
+        var resultArrayStr = resultArray.toString();
         //removes commas from string
-        let resultArrayStrNoComma = resultArrayStr.replace(/,/g, "");
+        var resultArrayStrNoComma = resultArrayStr.replace(/,/g, "");
         //returns string with deleted item
         document.getElementById("result-text").innerHTML = resultArrayStrNoComma;
     }
@@ -100,17 +101,17 @@ function clear() {
 function calculate () {
     //catched syntax error and displays them on calc screen
     try {
-        let x = document.getElementById("result-text").innerHTML
+        var x = document.getElementById("result-text").innerHTML;
         //replaces x with * to allow eval() to work
-        let xFormatTimes = x.replace("x", "*")
+        var xFormatTimes = x.replace("x", "*");
         //replaces ÷ with / to allow eval() to work 
-        let xFormat = xFormatTimes.replace("÷", "/")
+        var xFormat = xFormatTimes.replace("÷", "/");
         //perform sum on string
-        let y = eval(xFormat)
+        var y = eval(xFormat);
         //provides user with result 
         document.getElementById("result-text").innerHTML = y;
         // add item to history
-        addHistory(x, y)
+        addHistory(x, y);
     } catch {
         // shows user is they have input syntax error 
         document.getElementById("result-text").innerHTML = "Syntax Error";
@@ -120,48 +121,46 @@ function calculate () {
 //add item to history list
 function addHistory(operation, result) {
     // create new paragraph element 
-    let historyItem = document.createElement("p");
+    var historyItem = document.createElement("p");
     // gives user their inputted sum and the result
     historyItem.innerText = operation + " = " + result;
     //adds content to p element 
     document.getElementById("history").appendChild(historyItem);
-    
 }
 
 // assess if two operands are togther and prevents input
 function operandAssesment (a) {
-    let results = document.getElementById("result-text").innerHTML;
-    let resultsList = results.split('');
+    var results = document.getElementById("result-text").innerHTML;
+    var resultsList = results.split('');
     //last item entered by user
-    let x = resultsList.pop();
+    var x = resultsList.pop();
     //if last item is a number allows operator to be inputted
     if (x === "1" || x === "2" || x === "3" || x === "4" || x === "5" || x === "6" || x === "7" || x === "8" || x === "9" || x === "0" || x === "(" || x === ")") {
-        addToCalc(a)
+        addToCalc(a);
     }
-
 }
 
 // allows negative input after single operator 
 function negativeAssesment () {
-    let results = document.getElementById("result-text").innerHTML;
-    let resultsList = results.split('');
-    let x = resultsList.pop();
-    let y = resultsList.pop();
+    var results = document.getElementById("result-text").innerHTML;
+    var resultsList = results.split('');
+    var x = resultsList.pop();
+    var y = resultsList.pop();
     // prevents more than 2 minus signs
     if (x !== "-" && y !== "-") {
         addToCalc("-");
-    };
-};
+    }
+}
 
 // adds user input into the calculator screen
 function addToCalc(a) {
     //ensurs display is not full
-    let maxCheck = checkMaximum()
-    let display = document.getElementById("result-text").innerHTML;
+    var maxCheck = checkMaximum();
+    var display = document.getElementById("result-text").innerHTML;
     if (maxCheck === "notFull") {
         //append user input onto string
-        let result = document.getElementById("result-text");
-        let input = document.createTextNode(a);
+        var result = document.getElementById("result-text");
+        var input = document.createTextNode(a);
         result.appendChild(input);
         //clears display if Syntax error shown and user presses button
         if (display == "Syntax Error") {
@@ -174,10 +173,10 @@ function addToCalc(a) {
 //checks number of items in display 
 function checkMaximum () {
     resultList = document.getElementById("result-text").innerHTML;
-    let resultArray = resultList.split('');
-    let length = resultArray.length
+    var resultArray = resultList.split('');
+    var length = resultArray.length;
     if (length <= 16) {
-        let result = "notFull";
+        var result = "notFull";
         return result;
     } else {
         // calc full provided to user as alert
@@ -193,47 +192,45 @@ document.getElementById("dark-mode").addEventListener("click", function() {
 
 // adds all dark classes 
 function darkMode() {
-    let body = document.body;
+    var body = document.body;
     body.classList.toggle("dark-body");
 
-    let background = document.getElementById("calc-outer");
+    var background = document.getElementById("calc-outer");
     background.classList.toggle("dark-background");
 
-    let calc = document.getElementById("container");
+    var calc = document.getElementById("container");
     calc.classList.toggle("dark-calculator");
 
-    let result = document.getElementById("result");
+    var result = document.getElementById("result");
     result.classList.toggle("dark-result");
 
-    let darkBtn = document.getElementById("dark-mode");
-    darkBtn.classList.toggle("dark-btn")
+    var darkBtn = document.getElementById("dark-mode");
+    darkBtn.classList.toggle("dark-btn");
 
-    let history = document.getElementById("clear-history");
-    history.classList.toggle("dark-btn")
+    var history = document.getElementById("clear-history");
+    history.classList.toggle("dark-btn");
 
     document.querySelectorAll("button").forEach(item => {
         item.classList.toggle("dark-button");
     });
 
     //loop to give operator buttons dark class
-    const operator = ["open-bracket", "close-bracket", "division", "multiply", "minus", "point", "plus"]
+    const operator = ["open-bracket", "close-bracket", "division", "multiply", "minus", "point", "plus"];
     const special = ["equals", "clear", "ac"];
-    let i = 1
+    var i = 1;
     while (i < 8) {
-        let id = operator.pop()
-        let x = document.getElementById(id);
-        x.classList.toggle("dark-operator")
-        i += 1
+        var id = operator.pop();
+        var x = document.getElementById(id);
+        x.classList.toggle("dark-operator");
+        i += 1;
     }
 
     //loop to give special buttons dark class
-    let e = 1
+    var e = 1;
     while (e < 4) {
-        let specialButton = special.pop()
-        let y = document.getElementById(specialButton);
-        y.classList.toggle("dark-special")
-        e += 1
+        var specialButton = special.pop();
+        var y = document.getElementById(specialButton);
+        y.classList.toggle("dark-special");
+        e += 1;
     }
-
-
 }
