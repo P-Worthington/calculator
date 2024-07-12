@@ -53,7 +53,7 @@ document.getElementById("point").addEventListener("click", function() {
     operandAssesment(".");
 });
 document.getElementById("equals").addEventListener("click", function() {
-    addToCalc("=");
+    calculate();
 });
 document.getElementById("plus").addEventListener("click", function() {
     operandAssesment("+");
@@ -71,6 +71,14 @@ function clear() {
     let resultArrayStrNoComma = resultArrayStr.replace(/,/g, "");
     document.getElementById("result-text").innerHTML = resultArrayStrNoComma;
 
+}
+
+function calculate () {
+    //let x = document.getElementById("result-text").value 
+    //let y = math.evaluate(x) 
+    //document.getElementById("result-text").value = y
+    //console.log(y)
+    console.log("hello")
 }
 
 function operandAssesment (a) {
