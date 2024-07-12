@@ -46,6 +46,7 @@ body {
 .button-row {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 
 }
 
@@ -95,6 +96,11 @@ body {
     font-size: 30px;
 }
 
+.history-item-container {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 .history-item-container p {
     background-color: grey;
     width: 60%;
@@ -109,7 +115,15 @@ body {
 }
 
 @media only screen and (max-width: 380px) {
-    body {
-        background-color: black;
+    .background {
+        width: 90%;
+    }
+
+    .calculator {
+        min-width: 100%;
+    }
+
+    .result-row {
+        width: 100%;
     }
 }
