@@ -46,7 +46,7 @@ document.getElementById("3").addEventListener("click", function() {
     addToCalc("3");
 });
 document.getElementById("minus").addEventListener("click", function() {
-    operandAssesment("-");
+    negativeAssesment("-");
 });
 document.getElementById("0").addEventListener("click", function() {
     addToCalc("0");
@@ -116,12 +116,27 @@ function operandAssesment (a) {
 
 }
 
+function negativeAssesment () {
+    let results = document.getElementById("result-text").innerHTML;
+    let resultsList = results.split('');
+    let x = resultsList.pop();
+    let y = resultsList.pop();
+    if (x !== "-" && y !== "-") {
+        addToCalc("-");
+    };
+};
+
 function addToCalc(a) {
     let maxCheck = checkMaximum()
+    let display = document.getElementById("result-text").innerHTML;
     if (maxCheck === "notFull") {
         let result = document.getElementById("result-text");
         let input = document.createTextNode(a);
         result.appendChild(input);
+        if (display == "Syntax Error") {
+            clearAll();
+            display = document.createTextNode(a);
+        }
     }
 }
 
