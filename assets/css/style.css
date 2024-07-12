@@ -1,3 +1,4 @@
+/*General body styling*/
 body {
     font-family: sans-serif;
     background-color: #d2d2d2;
@@ -32,7 +33,7 @@ body {
     flex-direction: column;
 }
 
-/*container*/
+/*container of calculator*/
 .calculator {
     background-color: #a4a4a4;
     width: fit-content;
@@ -42,7 +43,7 @@ body {
     transition: background-color .24s
 }
 
-/*answer box*/
+/*answer box provides result to user*/
 .result-row {
     background-color: #d2d2d2;
     border: 5px solid #212016;
@@ -54,6 +55,8 @@ body {
 }
 
 /*calculator button properties*/
+
+/*each row of calculator buttons*/
 .button-row {
     display: flex;
     justify-content: space-between;
@@ -61,34 +64,42 @@ body {
 
 }
 
+/*general properties for calc buttons*/
 .button {
     width: 25%;
     height: 50px;
     font-size: 20px;
     border-radius: 5px;
     font-weight: 700;
-    transition: background-color .24s
+    transition: background-color .24s;
+    cursor: pointer;
 }
 
+/*Clear buttons*/
 .ac-button {
     background-color: #c35446;
 }
 
+/*equals button*/
 .equals-button {
     background-color: #6699cc;
 }
 
+/*operators such as - x / */
 .operator {
     background-color: #6b6e70;
     transition: background-color .24s
 }
 
+/*button to clear history of results*/
 .clear-history-btn {
     width: 150px;
     margin-left: auto;
     margin-right: auto;
+    cursor: pointer;
 }
 
+/*contains each history item*/
 .clear-history-container {
     display: flex;
 }
@@ -105,19 +116,22 @@ body {
     margin-top: 50px;
 }
 
+/*history header properties*/
 .history h2 {
     font-size: 30px;
 }
 
+/*produces list of operations with latest first*/
 .history-item-container {
     display: flex;
     flex-direction: column-reverse;
 }
 
+/*properties for history items*/
 .history-item-container p {
     background-color: #212016;
     color: #ccc;
-    width: 30%;
+    width: 40%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -128,6 +142,7 @@ body {
     padding-bottom: 10px;
 }
 
+/*properties for toggle dark mode button*/
 .dark-mode-btn {
     border: 0;
     outline: 0;
@@ -148,6 +163,7 @@ body {
     box-shadow: 1px 2px #212016;
 }
 
+/*media query for very small screen sizes*/
 @media only screen and (max-width: 380px) {
     .background {
         width: 90%;
@@ -161,24 +177,34 @@ body {
         width: 100%;
     }
 
+    
+}
+
+/*media query for medium sized screens*/
+@media only screen and (max-width: 600px) {
     .history-item-container p {
         width: 90%;
     }
 }
 
-/*Dark Mode properties*/
+/*
+Dark Mode properties
+*/
 
+/*Outer body*/
 .dark-body {
     background-color: #212016;
     color: #ccc;
     transition: background-color .24s
 }
 
+/*calculator background*/
 .dark-background, .dark-calculator {
     background-color: #000;
     transition: background-color .24s
 }
 
+/*results box where answer displayed*/
 .dark-result {
     background-color: #212016;
     border: 5px solid #6b6e70;
@@ -186,28 +212,33 @@ body {
     transition: background-color .24s
 }
 
+/*toggle dark button and history button dark mode*/
 .dark-btn {
     background-color: #5c5e60;
     color: #ccc;
     transition: background-color .24s
 }
 
+/*calculator number buttons in dark mode*/
 .dark-num-btn {
     background-color: #6b6e70;
     transition: background-color .24s
 }
 
+/*calculator buttons in dark*/
 .dark-button {
     background-color: #6b6e70;
     transition: background-color .24s
 }
 
+/*operator buttons in dark mode*/
 .dark-operator {
     background-color: #212016;
     transition: background-color .24s;
     color: #ccc;
 }
 
+/*special buttons like equals in dark mode*/
 .dark-special {
     background-color: #5c5e60;
     transition: background-color .24s;
