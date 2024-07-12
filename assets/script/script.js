@@ -65,8 +65,8 @@ document.getElementById("clear-history").addEventListener("click", function() {
 });
 
 function clearHistory() {
-    let history = document.getElementById("history-item-container");
-    console.log(history);
+    let history = document.getElementById("history");
+    history.textContent = "";
 }
 
 function clearAll () {
