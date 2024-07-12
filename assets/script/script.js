@@ -162,5 +162,5 @@ document.getElementById("dark-mode").addEventListener("click", function() {
 function darkMode() {
     console.log("hello")
     var element = document.body;
-  element.classList.toggle("dark-body");
-  }
+    element.classList.toggle("dark-body");
+}

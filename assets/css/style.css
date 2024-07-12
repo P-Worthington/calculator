@@ -1,10 +1,11 @@
 body {
     font-family: sans-serif;
+    background-color: #d2d2d2;
 }
 
 /*background*/
 .background {
-    background-color: lightblue;
+    background-color: #a4a4a4;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
@@ -31,7 +32,7 @@ body {
 
 /*container*/
 .calculator {
-    background-color: lightblue;
+    background-color: #a4a4a4;
     width: fit-content;
     min-width: 300px;
     margin-left: auto;
@@ -109,7 +110,7 @@ body {
 
 .history-item-container p {
     background-color: grey;
-    width: 60%;
+    width: 30%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -155,6 +156,10 @@ body {
 
     .result-row {
         width: 100%;
+    }
+
+    .history-item-container p {
+        width: 90%;
     }
 }
 
