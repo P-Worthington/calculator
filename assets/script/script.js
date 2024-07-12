@@ -78,9 +78,10 @@ function clear() {
 function calculate () {
     try {
         let x = document.getElementById("result-text").innerHTML
-        let xFormat = x.replace("x", "*")
+        let xFormatTimes = x.replace("x", "*")
+        let xFormat = xFormatTimes.replace("÷", "/")
         let y = eval(xFormat)
-        console.log(y)
+        document.getElementById("result-text").innerHTML = y;
     } catch {
         document.getElementById("result-text").innerHTML = "Syntax Error";
     }
