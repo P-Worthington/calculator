@@ -152,3 +152,15 @@ function checkMaximum () {
     }
 
 }
+
+// dark mode
+document.getElementById("dark-mode").addEventListener("click", function() {
+    darkMode();
+});
+
+
+function darkMode() {
+    console.log("hello")
+    var element = document.body;
+  element.classList.toggle("dark-body");
+  }
