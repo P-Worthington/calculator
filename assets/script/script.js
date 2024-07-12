@@ -160,7 +160,54 @@ document.getElementById("dark-mode").addEventListener("click", function() {
 
 
 function darkMode() {
-    console.log("hello")
-    var element = document.body;
-    element.classList.toggle("dark-body");
+    let body = document.body;
+    body.classList.toggle("dark-body");
+
+    let background = document.getElementById("calc-outer");
+    background.classList.toggle("dark-background");
+
+    let calc = document.getElementById("container");
+    calc.classList.toggle("dark-calculator");
+
+    let result = document.getElementById("result");
+    result.classList.toggle("dark-result");
+
+    let darkBtn = document.getElementById("dark-mode");
+    darkBtn.classList.toggle("dark-btn")
+
+    let history = document.getElementById("clear-history");
+    history.classList.toggle("dark-btn")
+
+    document.querySelectorAll("button").forEach(item => {
+        item.classList.toggle("dark-button");
+    });
+
+    //let openBracket = document.getElementById("open-bracket");
+    //openBracket.classList.toggle("dark-operator"); 
+
+    //let closeBracket = document.getElementById("close-bracket");
+    //closeBracket.classList.toggle("dark-operator"); 
+
+    //let division = document.getElementById("division");
+    //division.classList.toggle("dark-operator"); 
+
+    const operator = ["open-bracket", "close-bracket", "division", "multiply", "minus", "point", "plus"]
+    const special = ["equals", "clear", "ac"];
+    let i = 1
+    while (i < 8) {
+        let id = operator.pop()
+        let x = document.getElementById(id);
+        x.classList.toggle("dark-operator")
+        i += 1
+    }
+
+    let e = 1
+    while (e < 4) {
+        let specialButton = special.pop()
+        let y = document.getElementById(specialButton);
+        y.classList.toggle("dark-special")
+        e += 1
+    }
+
+
 }

@@ -1,6 +1,7 @@
 body {
     font-family: sans-serif;
     background-color: #d2d2d2;
+    transition: background-color .24s
 }
 
 /*background*/
@@ -15,7 +16,8 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 5px;
-    box-shadow: 3px 5px black;
+    box-shadow: 3px 5px #212016;
+    transition: background-color .24s
 }
 
 /*header*/
@@ -37,16 +39,18 @@ body {
     min-width: 300px;
     margin-left: auto;
     margin-right: auto;
+    transition: background-color .24s
 }
 
 /*answer box*/
 .result-row {
-    background-color: white;
-    border: 5px solid red;
-    box-shadow: 3px 5px black;
+    background-color: #d2d2d2;
+    border: 5px solid #212016;
+    box-shadow: 1px 3px #212016;
     height: 90px;
     border-radius: 5px;
     margin-bottom: 10px;
+    transition: background-color .24s
 }
 
 /*calculator button properties*/
@@ -63,18 +67,20 @@ body {
     font-size: 20px;
     border-radius: 5px;
     font-weight: 700;
+    transition: background-color .24s
 }
 
 .ac-button {
-    background-color: lightcoral;
+    background-color: #c35446;
 }
 
 .equals-button {
-    background-color: aquamarine;
+    background-color: #6699cc;
 }
 
 .operator {
-    background-color: grey;
+    background-color: #6b6e70;
+    transition: background-color .24s
 }
 
 .clear-history-btn {
@@ -109,7 +115,8 @@ body {
 }
 
 .history-item-container p {
-    background-color: grey;
+    background-color: #212016;
+    color: #ccc;
     width: 30%;
     margin-left: auto;
     margin-right: auto;
@@ -138,11 +145,7 @@ body {
     width: 150px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 1px 2px black;
-}
-
-.dark-mode-btn:hover {
-    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(84 105 212) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 3px 9px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+    box-shadow: 1px 2px #212016;
 }
 
 @media only screen and (max-width: 380px) {
@@ -166,6 +169,46 @@ body {
 /*Dark Mode properties*/
 
 .dark-body {
-    background-color: black;
+    background-color: #212016;
     color: #ccc;
+    transition: background-color .24s
+}
+
+.dark-background, .dark-calculator {
+    background-color: #000;
+    transition: background-color .24s
+}
+
+.dark-result {
+    background-color: #212016;
+    border: 5px solid #6b6e70;
+    box-shadow: 1px 3px #212016;
+    transition: background-color .24s
+}
+
+.dark-btn {
+    background-color: #5c5e60;
+    color: #ccc;
+    transition: background-color .24s
+}
+
+.dark-num-btn {
+    background-color: #6b6e70;
+    transition: background-color .24s
+}
+
+.dark-button {
+    background-color: #6b6e70;
+    transition: background-color .24s
+}
+
+.dark-operator {
+    background-color: #212016;
+    transition: background-color .24s;
+    color: #ccc;
+}
+
+.dark-special {
+    background-color: #5c5e60;
+    transition: background-color .24s;
 }
