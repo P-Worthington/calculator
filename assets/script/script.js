@@ -1,3 +1,5 @@
+
+
 document.getElementById("open-bracket").addEventListener("click", function() {
     addToCalc("(");
 });
@@ -74,11 +76,14 @@ function clear() {
 }
 
 function calculate () {
-    //let x = document.getElementById("result-text").value 
-    //let y = math.evaluate(x) 
-    //document.getElementById("result-text").value = y
-    //console.log(y)
-    console.log("hello")
+    try {
+        let x = document.getElementById("result-text").innerHTML
+        let xFormat = x.replace("x", "*")
+        let y = eval(xFormat)
+        console.log(y)
+    } catch {
+        document.getElementById("result-text").innerHTML = "Syntax Error";
+    }
 }
 
 function operandAssesment (a) {
