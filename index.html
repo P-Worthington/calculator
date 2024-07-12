@@ -14,20 +14,25 @@
 </head>
 
 <body>
+    <!--title-->
     <div class="header-items">
         <h1 class="header">
             Calculator
         </h1>
-
+        <!--button to toggle dark or light mode-->
         <button type="button" class="dark-mode-btn" id="dark-mode">Toggle Dark Mode</button>
     </div>
 
+    <!--calculator outer container-->
     <div class="background" id="calc-outer">
+        <!--calculator inner container-->
         <div id="container" class="calculator">
+            <!--calculator screen-->
             <div id="result" class="result-row">
+                <!--results-->
                 <h3 id="result-text" class="result"></h3>
             </div>
-            
+            <!--first row of calculator buttons-->
             <div class="button-row row-1">
                 <button type="button" class="button operator" id="open-bracket">(</button>
                 <button type="button" class="button operator"  id="close-bracket">)</button>
@@ -35,6 +40,7 @@
                 <button type="button" class="button ac-button"  id="ac">AC</button>
             </div>
 
+            <!--second row of calculator buttons-->
             <div class="button-row row-2">
                 <button type="button" class="button" id="7">7</button>
                 <button type="button" class="button" id="8">8</button>
@@ -42,6 +48,7 @@
                 <button type="button" class="button operator" id="division">÷</button>
             </div>
 
+            <!--third row of calculator buttons-->
             <div class="button-row row-3">
                 <button type="button" class="button" id="4">4</button>
                 <button type="button" class="button" id="5">5</button>
@@ -49,6 +56,7 @@
                 <button type="button" class="button operator" id="multiply">x</button>
             </div>
 
+            <!--forth row of calculator buttons-->
             <div class="button-row row-4">
                 <button type="button" class="button" id="1">1</button>
                 <button type="button" class="button" id="2">2</button>
@@ -56,6 +64,7 @@
                 <button type="button" class="button operator" id="minus">-</button>
             </div>
 
+            <!--fifth row of calculator buttons-->
             <div class="button-row row-5">
                 <button type="button" class="button" id="0">0</button>
                 <button type="button" class="button operator" id="point">.</button>
@@ -65,32 +74,23 @@
 
         </div>
     </div>
-
+    <!--history header-->
     <div class="history">
         <h2 class="header">
             History        
         </h2>
 
+        <!--clear history button-->
         <div class="clear-history-container">
             <button type="button" class="button clear-history-btn" id="clear-history">Clear History</button>
         </div>
 
+        <!--container to contain history-->
         <div class="history-item-container" id="history"></div>
     </div>
 
     <!--Link own js-->
     <script src="assets/script/script.js"></script>
-    <script src= 
-        "https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
-        integrity= 
-        "sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"></script> 
-        <script src= 
-        "https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"
-        integrity= 
-        "sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"></script> 
+ 
 </body>
 </html>
