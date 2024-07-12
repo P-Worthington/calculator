@@ -85,9 +85,18 @@ function calculate () {
         let xFormat = xFormatTimes.replace("÷", "/")
         let y = eval(xFormat)
         document.getElementById("result-text").innerHTML = y;
+        addHistory(x, y)
     } catch {
         document.getElementById("result-text").innerHTML = "Syntax Error";
     }
+}
+
+function addHistory(operation, result) {
+    console.log(result)
+    let historyItem = document.createElement("p");
+    historyItem.innerText = operation + " = " + result;
+    document.getElementById("history").appendChild(historyItem);
+    
 }
 
 function operandAssesment (a) {
