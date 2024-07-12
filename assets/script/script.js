@@ -60,6 +60,14 @@ document.getElementById("equals").addEventListener("click", function() {
 document.getElementById("plus").addEventListener("click", function() {
     operandAssesment("+");
 });
+document.getElementById("clear-history").addEventListener("click", function() {
+    clearHistory();
+});
+
+function clearHistory() {
+    let history = document.getElementById("history-item-container");
+    console.log(history);
+}
 
 function clearAll () {
     document.getElementById("result-text").innerHTML = "";
@@ -92,7 +100,6 @@ function calculate () {
 }
 
 function addHistory(operation, result) {
-    console.log(result)
     let historyItem = document.createElement("p");
     historyItem.innerText = operation + " = " + result;
     document.getElementById("history").appendChild(historyItem);
@@ -122,7 +129,7 @@ function checkMaximum () {
     resultList = document.getElementById("result-text").innerHTML;
     let resultArray = resultList.split('');
     let length = resultArray.length
-    if (length <= 25) {
+    if (length <= 16) {
         let result = "notFull";
         return result;
     } else {

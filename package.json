@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "jquery": "^3.7.1",
     "mathjs": "^13.0.2"
   }
 }
