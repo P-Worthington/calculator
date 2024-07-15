@@ -122,7 +122,9 @@ function calculate () {
         }
     } catch {
         // shows user is they have input syntax error 
-        document.getElementById("result-text").innerHTML = "Syntax Error";
+        if (document.getElementById("result-text").innerHTML !== "Math Error") {
+            document.getElementById("result-text").innerHTML = "Syntax Error";
+        }
     }
 }
 
