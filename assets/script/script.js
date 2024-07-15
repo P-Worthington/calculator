@@ -81,7 +81,7 @@ function clearAll () {
 function clear() {
     var content = document.getElementById("result-text").innerHTML;
     //clears all of output is syntax error
-    if (content === "Syntax Error") {
+    if (content === "Syntax Error" || content == "Infinity" || content == "undefined") {
         clearAll();
     } else {
         //split into array
@@ -199,7 +199,7 @@ function addToCalc(a) {
         var input = document.createTextNode(a);
         result.appendChild(input);
         //clears display if Syntax error shown and user presses button
-        if (display == "Syntax Error") {
+        if (display == "Syntax Error" || display == "Infinity" || display == "undefined") {
             clearAll();
             display = document.createTextNode(a);
         }
