@@ -226,7 +226,10 @@ function checkMaximum () {
 }
 
 function canClose () {
-    
+    var query = document.getElementById("result-text").innerHTML;
+    if (query.indexOf("(") > -1) {
+        addToCalc(")");
+    }
 }
 
 // dark mode event listener
