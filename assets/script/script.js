@@ -81,7 +81,7 @@ function clearAll () {
 function clear() {
     var content = document.getElementById("result-text").innerHTML;
     //clears all of output is syntax error
-    if (content === "Syntax Error" || content == "Infinity" || content == "undefined" || display == "-Infinity") {
+    if (content === "Syntax Error" || content == "Infinity" || content == "undefined" || content == "-Infinity" || content == "Math Error") {
         clearAll();
     } else {
         //split into array
@@ -109,12 +109,16 @@ function calculate () {
         //perform sum on string
         var y = eval(xFormat);
         //provides user with result 
-        document.getElementById("result-text").innerHTML = y;
-        // add item to history
-        if (x === "" || x === "undefined") {
+        if (y ==! NaN) {
+            document.getElementById("result-text").innerHTML = y;
+            // add item to history
+            if (x === "" || x === "undefined") {
             //to not add history
-        } else {
+            } else {
             addHistory(x, y);
+            }
+        } else {
+            document.getElementById("result-text").innerHTML = "Math Error";
         }
     } catch {
         // shows user is they have input syntax error 
@@ -203,7 +207,7 @@ function addToCalc(a) {
         var input = document.createTextNode(a);
         result.appendChild(input);
         //clears display if Syntax error shown and user presses button
-        if (display == "Syntax Error" || display == "Infinity" || display == "undefined" || display == "-Infinity") {
+        if (display == "Syntax Error" || display == "Infinity" || display == "undefined" || display == "-Infinity" || display == "Math Error") {
             clearAll();
             display = document.createTextNode(a);
         }
