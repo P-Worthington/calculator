@@ -297,12 +297,10 @@ function darkMode() {
     } else {
         document.getElementById("dark-mode").innerHTML = "Dark Mode";
     }
-
-    var scrollBtn = document.getElementById("scroll-top");
-    scrollBtn.classList.toggle("dark-scroll-btn");
 }
 
 //scroll to top event listener
+// from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
 document.getElementById("scroll-top").addEventListener("click", function() {
     toTop();
 });

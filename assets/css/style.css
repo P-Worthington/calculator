@@ -206,19 +206,16 @@ scroll to top button
     bottom: 20px;
     right: 30px; 
     z-index: 99; 
-    background-color: red; 
+    background-color: black;
     border: none;
-    box-shadow: 1px 2px #212016;
+    box-shadow: 1px 2px black;
     color: white; 
+    font-weight: 500;
     cursor: pointer; 
     padding: 15px; 
     border-radius: 10px; 
     font-size: 18px; 
     transition: background-color .24s;
-  }
-  
-  #scroll-top:hover {
-    background-color: darkred; 
   }
 
 /*
@@ -264,6 +261,7 @@ Dark Mode properties
 .dark-button {
     background-color: #6b6e70;
     transition: background-color .24s;
+    font-weight: 700;
 }
 
 /*operator buttons in dark mode*/
@@ -277,16 +275,6 @@ Dark Mode properties
 .dark-special {
     background-color: #5c5e60;
     transition: background-color .24s;
-}
-
-.dark-scroll-btn {
-    background-color: #212016;
-    color: #ccc;
-}
-
-.dark-scroll-btn:hover {
-    background-color: #000;
-    color: #ccc;
 }
 
 /*media query specific to the font size of screen and history*/
