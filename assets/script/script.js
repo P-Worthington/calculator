@@ -107,17 +107,20 @@ function calculate () {
         //replaces ÷ with / to allow eval() to work 
         var xFormat = xFormatTimes.replace("÷", "/");
         //perform sum on string
-        var y = eval(xFormat);
+        var y = eval(xFormat).toString();
         //provides user with result 
-        if (y ==! NaN) {
-            document.getElementById("result-text").innerHTML = y;
+        //need to turn to string in case NaN identifed
+        console.log(y)
+
+        if (y !== "NaN") {
             // add item to history
             if (x === "" || x === "undefined") {
             //to not add history
             } else {
-            addHistory(x, y);
+                addHistory(x, y);
+                document.getElementById("result-text").innerHTML = y;
             }
-        } else {
+        } else if (y === "NaN") {
             document.getElementById("result-text").innerHTML = "Math Error";
         }
     } catch {
