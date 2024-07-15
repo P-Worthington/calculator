@@ -129,8 +129,9 @@ body {
 
 /*properties for history items*/
 .history-item-container p {
-    background-color: #212016;
-    color: #ccc;
+    background-color: #6b6e70;
+    color: black;
+    letter-spacing: 3px;
     width: 40%;
     max-width: 300px;
     margin-left: auto;
@@ -141,6 +142,9 @@ body {
     font-size: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+    cursor: pointer;
+    box-shadow: 1px 2px black;
+    font-weight: 600;
 }
 
 /*properties for toggle dark mode button*/
@@ -196,13 +200,13 @@ Dark Mode properties
 .dark-body {
     background-color: #212016;
     color: #ccc;
-    transition: background-color .24s
+    transition: background-color .24s;
 }
 
 /*calculator background*/
 .dark-background, .dark-calculator {
     background-color: #000;
-    transition: background-color .24s
+    transition: background-color .24s;
 }
 
 /*results box where answer displayed*/
@@ -210,26 +214,27 @@ Dark Mode properties
     background-color: #212016;
     border: 5px solid #6b6e70;
     box-shadow: 1px 3px #212016;
-    transition: background-color .24s
+    transition: background-color .24s;
 }
 
 /*toggle dark button and history button dark mode*/
 .dark-btn {
     background-color: #5c5e60;
-    color: #ccc;
-    transition: background-color .24s
+    color: black;
+    transition: background-color .24s;
+    box-shadow: 1px 2px black;
 }
 
 /*calculator number buttons in dark mode*/
 .dark-num-btn {
     background-color: #6b6e70;
-    transition: background-color .24s
+    transition: background-color .24s;
 }
 
 /*calculator buttons in dark*/
 .dark-button {
     background-color: #6b6e70;
-    transition: background-color .24s
+    transition: background-color .24s;
 }
 
 /*operator buttons in dark mode*/
