@@ -124,7 +124,7 @@ Catching errors was the next priority. Eval works in a programmatic way. It not 
 ## Final Changes 
 In the later stages of development a scroll to top button has been added which allos the user to press the button and scroll back to the very top of the page this is useful when a large number of history items have been added. 
 
-The scroll to top button is located at the bottom right of the screen on larger devices and the center of smaller devices. 
+The scroll to top button is located at the bottom right of the screen on larger devices and removed on small devices. This was following testing with realword users. The scroll to top did not feel natural when using movile devices and it took up valueable screen space.
 
 ## References 
 Layout of the calculator was taken from the Google Chrome browser calculator. 
