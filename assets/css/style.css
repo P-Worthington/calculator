@@ -132,6 +132,7 @@ body {
     background-color: #212016;
     color: #ccc;
     width: 40%;
+    max-width: 300px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;

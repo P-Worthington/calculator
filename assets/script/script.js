@@ -122,6 +122,8 @@ function calculate () {
 function addHistory(operation, result) {
     // create new paragraph element 
     var historyItem = document.createElement("p");
+    historyItem.setAttribute("class", "history-item")
+    historyItem.setAttribute("id", "test");
     // gives user their inputted sum and the result
     historyItem.innerText = operation + " = " + result;
     //adds content to p element 
