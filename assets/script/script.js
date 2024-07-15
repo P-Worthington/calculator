@@ -225,8 +225,10 @@ function checkMaximum () {
 
 }
 
+//check if a closing parentheis can be entered 
 function canClose () {
     var query = document.getElementById("result-text").innerHTML;
+    //if opening parethesis present 
     if (query.indexOf("(") > -1) {
         addToCalc(")");
     }
