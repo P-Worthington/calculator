@@ -110,9 +110,8 @@ function calculate () {
         var y = eval(xFormat).toString();
         //provides user with result 
         //need to turn to string in case NaN identifed
-        console.log(y)
 
-        if (y !== "NaN") {
+        if (y !== "NaN" && y !== "Infinity" && y !== "-Infinity") {
             // add item to history
             if (x === "" || x === "undefined") {
             //to not add history
@@ -120,7 +119,7 @@ function calculate () {
                 addHistory(x, y);
                 document.getElementById("result-text").innerHTML = y;
             }
-        } else if (y === "NaN") {
+        } else if (y === "NaN" || y === "Infinity" || y === "-Infinity") {
             document.getElementById("result-text").innerHTML = "Math Error";
         }
     } catch {
