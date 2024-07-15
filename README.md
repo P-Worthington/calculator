@@ -121,6 +121,11 @@ However, there were certain provisions necessary to put in place in order for ev
 
 Catching errors was the next priority. Eval works in a programmatic way. It not only produces syntax errors but also undefined, Infinity, -Infinity, and NaN. Whilst these concepts are known to programmers they mean very little to most using a calculator particularly undefined and NaN. These errors have been accounted for producing Math Errors when impossible operations are performed such as 5÷0 or 0÷0.
 
+## Final Changes 
+In the later stages of development a scroll to top button has been added which allos the user to press the button and scroll back to the very top of the page this is useful when a large number of history items have been added. 
+
+The scroll to top button is located at the bottom right of the screen on larger devices and the center of smaller devices. 
+
 ## References 
 Layout of the calculator was taken from the Google Chrome browser calculator. 
 https://www.google.com/search?q=calculator&rlz=1C1FKPE_en-GBGB931GB931&oq=calculator&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIKCAEQABixAxiABDIKCAIQABixAxiABDIKCAMQABixAxiABDIKCAQQABixAxiABDIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPKgCCLACAQ&sourceid=chrome&ie=UTF-8

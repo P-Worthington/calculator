@@ -277,6 +277,13 @@ Dark Mode properties
     transition: background-color .24s;
 }
 
+/*media query to center scroll top button on small screens*/
+@media only screen and (max-width: 540px) {
+    #scroll-top {
+        display: none;
+      }
+}
+
 /*media query specific to the font size of screen and history*/
 
 @media only screen and (max-width: 375px) {
