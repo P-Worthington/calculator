@@ -143,7 +143,7 @@ function addHistory(operation, result) {
 function returnToCalc(x) {
     var query = document.getElementById(x).innerHTML;
     //remove result just require the operation
-    var operation = query.split('=')[0];
+    var operation = query.split('=')[0].replace(/\s/g, "");
     //adds to calculator screen
     clearAndAdd(operation);
 }
