@@ -122,12 +122,46 @@ function calculate () {
 function addHistory(operation, result) {
     // create new paragraph element 
     var historyItem = document.createElement("p");
-    historyItem.setAttribute("class", "history-item")
-    historyItem.setAttribute("id", "test");
+    //add class attribute to created element 
+    historyItem.setAttribute("class", "history-item");
+    //obtain next number of id
+    var idNum = getNextNum();
+    var newId = "history-" + idNum;
+    //add id
+    historyItem.setAttribute("id", newId);
     // gives user their inputted sum and the result
     historyItem.innerText = operation + " = " + result;
     //adds content to p element 
     document.getElementById("history").appendChild(historyItem);
+    //add event listener
+    document.getElementById(newId).addEventListener("click", function() {
+        returnToCalc(newId);
+    });
+}
+
+//function to return history item to calculator
+function returnToCalc(x) {
+    var query = document.getElementById(x).innerHTML;
+    //remove result just require the operation
+    var operation = query.split('=')[0];
+    //adds to calculator screen
+    clearAndAdd(operation);
+}
+
+//function to remove current on screen content of calculator and add new 
+function clearAndAdd (content) {
+    document.getElementById("result-text").innerHTML = "";
+    document.getElementById("result-text").innerHTML = content;
+}
+
+// searches for history item ID's and adds one to give unique id. 
+function getNextNum () {
+    var classList = document.getElementsByClassName("history-item");
+    //length of history
+    var length = classList.length;
+    // add one and passing to addHistory()
+    var result = length + 1;
+    return result;
 }
 
 // assess if two operands are togther and prevents input
