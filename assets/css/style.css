@@ -181,8 +181,6 @@ body {
     .result-row {
         width: 100%;
     }
-
-    
 }
 
 /*media query for medium sized screens*/
@@ -248,4 +246,42 @@ Dark Mode properties
 .dark-special {
     background-color: #5c5e60;
     transition: background-color .24s;
+}
+
+/*media query specific to the font size of screen and history*/
+
+@media only screen and (max-width: 375px) {
+
+    .result {
+        font-size: 25px;
+    }
+
+    .history-item-container p {
+        font-size: 25px;
+        letter-spacing: normal;
+    }
+}
+
+@media only screen and (max-width: 315px) {
+
+    .result {
+        font-size: 20px;
+    }
+
+    .history-item-container p {
+        font-size: 15px;
+        letter-spacing: normal;
+    }
+}
+
+@media only screen and (max-width: 250px) {
+
+    .result {
+        font-size: 18px;
+    }
+
+    .history-item-container p {
+        font-size: 15px;
+        letter-spacing: normal;
+    }
 }
