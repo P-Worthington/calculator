@@ -290,4 +290,11 @@ function darkMode() {
         y.classList.toggle("dark-special");
         e += 1;
     }
+
+    btnCur = document.getElementById("dark-mode").innerHTML;
+    if (btnCur === "Dark Mode") {
+        document.getElementById("dark-mode").innerHTML = "Light Mode";
+    } else {
+        document.getElementById("dark-mode").innerHTML = "Dark Mode";
+    }
 }
