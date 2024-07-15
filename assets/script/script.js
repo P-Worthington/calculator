@@ -1,5 +1,3 @@
-
-
 // event listeners for calculator buttons
 document.getElementById("open-bracket").addEventListener("click", function() {
     addToCalc("(");
@@ -116,8 +114,10 @@ function calculate () {
             if (x === "" || x === "undefined") {
             //to not add history
             } else {
-                addHistory(x, y);
-                document.getElementById("result-text").innerHTML = y;
+                if (x !== y) {
+                    addHistory(x, y);
+                    document.getElementById("result-text").innerHTML = y;
+                }
             }
         } else if (y === "NaN" || y === "Infinity" || y === "-Infinity") {
             document.getElementById("result-text").innerHTML = "Math Error";
