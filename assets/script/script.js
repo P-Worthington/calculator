@@ -5,7 +5,7 @@ document.getElementById("open-bracket").addEventListener("click", function() {
     addToCalc("(");
 });
 document.getElementById("close-bracket").addEventListener("click", function() {
-    addToCalc(")");
+    canClose(")");
 });
 document.getElementById("clear").addEventListener("click", function() {
     clear();
@@ -111,7 +111,11 @@ function calculate () {
         //provides user with result 
         document.getElementById("result-text").innerHTML = y;
         // add item to history
-        addHistory(x, y);
+        if (x === "" || x === "undefined") {
+            //to not add history
+        } else {
+            addHistory(x, y);
+        }
     } catch {
         // shows user is they have input syntax error 
         document.getElementById("result-text").innerHTML = "Syntax Error";
@@ -219,6 +223,10 @@ function checkMaximum () {
         alert("Calculator full. Press C to delete single item ot AC to delete all.");
     }
 
+}
+
+function canClose () {
+    
 }
 
 // dark mode event listener
