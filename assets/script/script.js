@@ -297,4 +297,17 @@ function darkMode() {
     } else {
         document.getElementById("dark-mode").innerHTML = "Dark Mode";
     }
+
+    var scrollBtn = document.getElementById("scroll-top");
+    scrollBtn.classList.toggle("dark-scroll-btn");
 }
+
+//scroll to top event listener
+document.getElementById("scroll-top").addEventListener("click", function() {
+    toTop();
+});
+
+function toTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
