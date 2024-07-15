@@ -73,6 +73,7 @@ body {
     font-weight: 700;
     transition: background-color .24s;
     cursor: pointer;
+    color: #000;
 }
 
 /*Clear buttons*/
@@ -97,6 +98,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     cursor: pointer;
+    color: #000;
 }
 
 /*contains each history item*/
