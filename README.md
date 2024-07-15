@@ -1,131 +1,126 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# JavaScript Calculator 
 
-Welcome Paul Worthington,
+This project is designed using HTML CSS and JS to produce a fully working calculator web application. The calculator includes all standard operations as well as parentheses to separate operations. The user's inputs are displayed on the calculator screen as well as the result. Syntax errors are provided to the user through the calculator screen. A history list is provided showing the user's previous calculations performed. There is an option to clear history and put the application into dark mode. History instances can be clicked to put them back into the calculator screen. 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+<img src="assets/readme-images/calc-readme-responsive.png">
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+## Visual Features 
+The web application is contained within one webpage with multiple features listed below. There is a degree of assumed knowledge that a user is able to operate a standard calculator. The design has been chosen to be simple and minimalist containing only what is necessary for a user to use the application without any further distractions. 
 
-## Gitpod Reminders
+### Header
+At the top of the web application there is a h1 element showing the name of the application, simply ‘Calculator’. The styling for this header is simplistic by design. It is there to show the user the nature of the application but not to distract from the operation itself. It is also there to aid screen readers therefore improving accessibility. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+<img src="assets/readme-images/calc-readme-header.jpg">
 
-`python3 -m http.server`
+### Dark Mode
+Dark mode was added to this application for aesthetic and functional reasons. Functionally, to reduce eye strain for users particularly those using computers for extended periods of time and aesthetically for users who simply prefer the look of the calculator in dark mode. It has been set to light by default. 
 
-A blue button should appear to click: _Make Public_,
+<img src="assets/readme-images/calc-readme-darkmode.jpg">
 
-Another blue button should appear to click: _Open Browser_.
+### Calculator
+The calculator itself is positioned below the title and dark mode toggle button. It is designed to match a normal handheld calculator, something the user will be familiar with. 
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+<img src="assets/readme-images/calc-readme-calculator.jpg">
 
-A blue button should appear to click: _Make Public_,
+### Calculator Screen
+Situated at the top of the calculator is the calculator screen. It displays the operation the user is trying to perform and the result once the equals button has been pressed. It displays each number as it is pressed by the user so they receive immediate response to their action. 
 
-Another blue button should appear to click: _Open Browser_.
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Calculator Buttons
+Below the screen 20 buttons are located containing the numbers 0-9 and all simple operands including parentheses (brackets) and decimal point. The layout of the buttons was taken from the Google Chrome calculator. The Numbers are coloured differently from the operators which are once again coloured differently from the special buttons such as clear and equals. This change is more pronounced in lightmode but more subtle in dark mode. 
 
-To log into the Heroku toolbelt CLI:
+### History
+Beneath the calculator there is a header with the text content ‘History’ and the button that says ‘Clear History’. Once the equals button is pressed if it does not return a syntax error the operation as well as the result will be displayed below the header. The aids user experience if multiple results are required and need to be stored for a brief period. It also helps if the answer is incorrect the user can retrace their steps and identify the error. Clicking the history item will return it to the calculator for the user to complete further operations.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+Pressing the clear history button simply removes all history items from the list. 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+<img src="assets/readme-images/calc-readme-history.jpg">
 
-### Connecting your Mongo database
+## Technical Features 
+This project was designed with defensive programming at its core. The aim of which was to make the calculator probust enough anyone could use it. Below are a number of features added by the developer to improve functionality and prevent error. 
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+### Syntax Errors
+Similarly to programming languages mathematical operations have specific syntax that it must adhere to else the operation will fail. Any operation that results in a syntax error is sent to the user via the calculator screen and the history of that operation is not sent to the history bank. 
 
-------
+Pressing any button will remove the syntax error message and allow further use of the calculator. 
 
-## Release History
+<img src="assets/readme-images/calc-readme-syntaxerror.jpg">
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### First Instance Operators 
+The user is prevented from entering multiply, divide, subtract, add or decimal point as the first item on the calculator screen. As no mathematical operation can start with these operators. It is however possible to start an operation with the minus operator when it is used to denote a negative number. Therefore, the minus operator is permitted to be inputted first but only one instance is permitted as the next item must be a number value. 
 
-**June 18, 2024,** Add Mongo back into template
+### Multiple Instance Operators
+Multiple operators are not permitted following each other for example 6 x x 7. After each operator there is an expectation for a number value. Once again this is not the case for the minus operator where it is acceptable to query 6 x -7. But 6 x --7, is prohibited. 
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+<img src="assets/readme-images/calc-readme-minus-start.jpg">
 
-**May 28 2024:** Fix Mongo and Links installs
+### Clearing
+The ‘C’ button is used to clear the most recent entry into the calculator and ‘AC’ is used to clear all. This pattern persists unless syntax error is displayed in the calculator in which case pressing C AC or any number button will remove the whole message. 
 
-**April 26 2024:** Update node version to 16
+### Calculator Full
+An alert is provided to the user when the calculator is full and can no longer accept further inputs from the user. Advice is passed to the user requesting that they clear the whole display using AC or clear one item using C. 
 
-**September 20 2023:** Update Python version to 3.9.17.
+<img src="assets/readme-images/calc-readme-alert.jpg">
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### Post Deployment alterations 
+Following the deployment of this site various changes have been identified and rectified to improve user experience. 
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+Remove Space From End of History Item 
+It was noticed that when clicking a history item to put it back onto the calculator screen there was white space before entering the next number or operator. Whilst this did not affect the evaluation of the sum it did not appear aesthetically pleasing, this white space was removed. 
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+<img src="assets/readme-images/calc-readme-math-error.jpg">
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### Remove Infinity 
+When dividing a positive number by 0 ‘Infinity’ will be returned, when dividing a negative number by 0 ‘-Infinity’ will be returned. This has been exchanged for a response produced by an actual calculator which is ‘Math Error’
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### Remove Undefined
+When pressing equals with no operation the result undefined would be provided to the user. Naturally this would also populate the history area. This was removed such that pressing the equals key with no input would produce no results. 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### Prevent close parentheses first
+When attempting to press the close parenthesis button a function called canClose() is called that checks that at least one opening parentheses is within the operation. If it is not the button will not work and there will be close parenthesis added to the display. 
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Remove NaN
+It was noticed after deployment that if the user queried 0/0 the result from eval() would be NaN (Not a Number). The developer has removed this in exchange for a more user friendly response of Math Error provided to the user. 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+### Prevent No Operation 
+Without this the user was able to press any number and the equals. This would produce a history entry of 3 = 3 or 4 = 4 or whatever number the user input. Whilst mathematically true there is no requirement for this to enter the history. It has therefore been removed. No pressing any number and then the equals will not alter the history nor will it produce an error. The number entered will simply remain. 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Validator testing 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### JavaScript testing
+Performed using jshint.com. Revealing no critical errors. The metrics are as follows: 
+There are 37 functions in this file.
+Function with the largest signature take 2 arguments, while the median is 0.
+Largest function has 27 statements in it, while the median is 1.
+The most complex function has a cyclomatic complexity value of 13 while the median is 1.
+JShint produced 5 warnings, 4 of which pertain to ES6. The fifth stating that eval can be harmful. This is a warning and not an error. Eval has been used appropriately and provisions have been put in place to prevent error. Errors that persist which are due to the user are caught and passed to the user using the calculator screen. 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### HTML testing
+Performed using validator.w3.org/. Revealing no errors of any sort. 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### CSS testing 
+Performed using jigsaw.w3.org/css-validator/ revealing no errors of any sort.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Lighthouse
+Lighthouse testing was also performed.
 
-------
+<img src="assets/readme-images/calc-readme-lighthouse.jpg">
 
-## FAQ about the uptime script
+## Deployment 
+Deployment was done via GitHub. Testing was performed on the deployed site to ensure that the CSS and JS files were connected showing the right file path. 
 
-**Why have you added this script?**
+Testing using IOS was done to ensure functionality on Apple devices. Due to the lack of a defined color of the calculator integers they were displayed in blue by ISO (Safari) as default. This was rectified by providing a color in the CSS file for the buttons. 
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+The alert was also tested on iPhone which produced a positive result. 
 
-**How will this affect me?**
+## Eval Function
+The eval() function was used to perform the actual calculation following the user's input. It takes a string and performs the desired operation if it can. If it is unable to, an error will be given. The eval function has proven very important in this project as it is able to perform calculations on strings obtained from the DOM. 
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+However, there were certain provisions necessary to put in place in order for eval to work effectively. Firstly, x and ÷ were chosen instead of * and / This was to improve the visual aesthetic of the calculator and it is what users of calculators are more used to seeing. This needed to be changed before performing the eval function. 
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+Catching errors was the next priority. Eval works in a programmatic way. It not only produces syntax errors but also undefined, Infinity, -Infinity, and NaN. Whilst these concepts are known to programmers they mean very little to most using a calculator particularly undefined and NaN. These errors have been accounted for producing Math Errors when impossible operations are performed such as 5÷0 or 0÷0.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+## References 
+Layout of the calculator was taken from the Google Chrome browser calculator. 
+https://www.google.com/search?q=calculator&rlz=1C1FKPE_en-GBGB931GB931&oq=calculator&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIKCAEQABixAxiABDIKCAIQABixAxiABDIKCAMQABixAxiABDIKCAQQABixAxiABDIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPKgCCLACAQ&sourceid=chrome&ie=UTF-8
