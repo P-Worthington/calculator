@@ -284,6 +284,11 @@ Dark Mode properties
     color: #ccc;
 }
 
+.dark-scroll-btn:hover {
+    background-color: #000;
+    color: #ccc;
+}
+
 /*media query specific to the font size of screen and history*/
 
 @media only screen and (max-width: 375px) {
