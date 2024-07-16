@@ -131,3 +131,6 @@ The scroll to top button is located at the bottom right of the screen on larger 
 ## References 
 Layout of the calculator was taken from the Google Chrome browser calculator. 
 https://www.google.com/search?q=calculator&rlz=1C1FKPE_en-GBGB931GB931&oq=calculator&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIKCAEQABixAxiABDIKCAIQABixAxiABDIKCAMQABixAxiABDIKCAQQABixAxiABDIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPKgCCLACAQ&sourceid=chrome&ie=UTF-8
+
+scroll to top button. 
+https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
