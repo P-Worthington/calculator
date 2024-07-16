@@ -15,79 +15,84 @@
 
 <body>
     <!--title-->
-    <div class="header-items">
-        <h1 class="header">
-            Calculator
-        </h1>
-        <!--button to toggle dark or light mode-->
-        <button type="button" class="dark-mode-btn" id="dark-mode">Dark Mode</button>
-    </div>
+    <header>
+        <div class="header-items">
+            <h1 class="header">
+                Calculator
+            </h1>
+            <!--button to toggle dark or light mode-->
+            <button type="button" class="dark-mode-btn" id="dark-mode">Dark Mode</button>
+        </div>
+    </header>
 
     <!--calculator outer container-->
-    <div class="background" id="calc-outer">
-        <!--calculator inner container-->
-        <div id="container" class="calculator">
-            <!--calculator screen-->
-            <div id="result" class="result-row">
-                <!--results-->
-                <p id="result-text" class="result"></p>
-            </div>
-            <!--first row of calculator buttons-->
-            <div class="button-row row-1">
-                <button type="button" class="button operator" id="open-bracket">(</button>
-                <button type="button" class="button operator"  id="close-bracket">)</button>
-                <button type="button" class="button ac-button"  id="clear">C</button>
-                <button type="button" class="button ac-button"  id="ac">AC</button>
-            </div>
+    <main>
+        <div class="background" id="calc-outer">
+            <!--calculator inner container-->
+            <div id="container" class="calculator">
+                <!--calculator screen-->
+                <div id="result" class="result-row">
+                    <!--results-->
+                    <p id="result-text" class="result"></p>
+                </div>
+                <!--first row of calculator buttons-->
+                <div class="button-row row-1">
+                    <button type="button" class="button operator" id="open-bracket">(</button>
+                    <button type="button" class="button operator"  id="close-bracket">)</button>
+                    <button type="button" class="button ac-button"  id="clear">C</button>
+                    <button type="button" class="button ac-button"  id="ac">AC</button>
+                </div>
 
-            <!--second row of calculator buttons-->
-            <div class="button-row row-2">
-                <button type="button" class="button" id="7">7</button>
-                <button type="button" class="button" id="8">8</button>
-                <button type="button" class="button" id="9">9</button>
-                <button type="button" class="button operator" id="division">÷</button>
-            </div>
+                <!--second row of calculator buttons-->
+                <div class="button-row row-2">
+                    <button type="button" class="button" id="7">7</button>
+                    <button type="button" class="button" id="8">8</button>
+                    <button type="button" class="button" id="9">9</button>
+                    <button type="button" class="button operator" id="division">÷</button>
+                </div>
 
-            <!--third row of calculator buttons-->
-            <div class="button-row row-3">
-                <button type="button" class="button" id="4">4</button>
-                <button type="button" class="button" id="5">5</button>
-                <button type="button" class="button" id="6">6</button>
-                <button type="button" class="button operator" id="multiply">x</button>
-            </div>
+                <!--third row of calculator buttons-->
+                <div class="button-row row-3">
+                    <button type="button" class="button" id="4">4</button>
+                    <button type="button" class="button" id="5">5</button>
+                    <button type="button" class="button" id="6">6</button>
+                    <button type="button" class="button operator" id="multiply">x</button>
+                </div>
 
-            <!--forth row of calculator buttons-->
-            <div class="button-row row-4">
-                <button type="button" class="button" id="1">1</button>
-                <button type="button" class="button" id="2">2</button>
-                <button type="button" class="button" id="3">3</button>
-                <button type="button" class="button operator" id="minus">-</button>
-            </div>
+                <!--forth row of calculator buttons-->
+                <div class="button-row row-4">
+                    <button type="button" class="button" id="1">1</button>
+                    <button type="button" class="button" id="2">2</button>
+                    <button type="button" class="button" id="3">3</button>
+                    <button type="button" class="button operator" id="minus">-</button>
+                </div>
 
-            <!--fifth row of calculator buttons-->
-            <div class="button-row row-5">
-                <button type="button" class="button" id="0">0</button>
-                <button type="button" class="button operator" id="point">.</button>
-                <button type="button" class="button equals-button" id="equals">=</button>
-                <button type="button" class="button operator" id="plus">+</button>
-            </div>
+                <!--fifth row of calculator buttons-->
+                <div class="button-row row-5">
+                    <button type="button" class="button" id="0">0</button>
+                    <button type="button" class="button operator" id="point">.</button>
+                    <button type="button" class="button equals-button" id="equals">=</button>
+                    <button type="button" class="button operator" id="plus">+</button>
+                </div>
 
+            </div>
         </div>
-    </div>
-    <!--history header-->
-    <div class="history">
-        <h2 class="header">
-            History        
-        </h2>
+    
+        <!--history header-->
+        <div class="history">
+            <h2 class="header">
+                History        
+            </h2>
 
-        <!--clear history button-->
-        <div class="clear-history-container">
-            <button type="button" class="button clear-history-btn" id="clear-history">Clear History</button>
+            <!--clear history button-->
+            <div class="clear-history-container">
+                <button type="button" class="button clear-history-btn" id="clear-history">Clear History</button>
+            </div>
+
+            <!--container to contain history-->
+            <div class="history-item-container" id="history"></div>
         </div>
-
-        <!--container to contain history-->
-        <div class="history-item-container" id="history"></div>
-    </div>
+    </main>
 
     <footer>
         <div>
