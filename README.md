@@ -108,7 +108,9 @@ Lighthouse testing was also performed.
 <img src="assets/readme-images/calc-readme-lighthouse.jpg">
 
 ## Deployment 
-Deployment was done via GitHub. Testing was performed on the deployed site to ensure that the CSS and JS files were connected showing the right file path. 
+Deployment was done via GitHub. Testing was performed on the deployed site to ensure that the CSS and JS files were connected showing the right file path.
+
+The application was deployed to GitHub pages from the code and automation tab within teh settings of the repository. It was deployed from the main branch. 
 
 Testing using IOS was done to ensure functionality on Apple devices. Due to the lack of a defined color of the calculator integers they were displayed in blue by ISO (Safari) as default. This was rectified by providing a color in the CSS file for the buttons. 
 
