@@ -202,9 +202,11 @@ scroll to top button
 
 #scroll-top {
     display: block;
-    position: fixed; 
+    position: relative; 
     bottom: 20px;
-    right: 30px; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
     z-index: 99; 
     background-color: black;
     border: none;
@@ -216,7 +218,8 @@ scroll to top button
     border-radius: 10px; 
     font-size: 18px; 
     transition: background-color .24s;
-  }
+    width: fit-content;
+}
 
 /*
 Dark Mode properties
