@@ -68,6 +68,8 @@ function clearHistory() {
     // clears history id 
     var history = document.getElementById("history");
     history.textContent = "";
+    document.getElementById("scroll-top").style.removeProperty("display");
+    document.getElementById("scroll-top").style.display = "none"
 }
 
 //clears calculator screen 
@@ -149,6 +151,19 @@ function addHistory(operation, result) {
     document.getElementById(newId).addEventListener("click", function() {
         returnToCalc(newId);
     });
+
+    //function to assess if scroll top to be displayed
+    displayScrollButton (idNum)
+}
+
+function displayScrollButton (idNum) {
+    if (idNum >= 4) {
+        document.getElementById("scroll-top").style.removeProperty("display");
+        document.getElementById("scroll-top").style.display = "block"
+    } else if (idNum < 4) {
+        document.getElementById("scroll-top").style.removeProperty("display");
+        document.getElementById("scroll-top").style.display = "none"
+    }
 }
 
 //function to return history item to calculator
