@@ -63,19 +63,22 @@ document.getElementById("clear-history").addEventListener("click", function() {
     clearHistory();
 });
 
+
 //function used to clear all history from users inputs
 function clearHistory() {
     // clears history id 
     var history = document.getElementById("history");
     history.textContent = "";
     document.getElementById("scroll-top").style.removeProperty("display");
-    document.getElementById("scroll-top").style.display = "none"
+    document.getElementById("scroll-top").style.display = "none";
 }
+
 
 //clears calculator screen 
 function clearAll () {
     document.getElementById("result-text").innerHTML = "";
 }
+
 
 //clears the last item typed on the calculator screen
 function clear() {
@@ -96,6 +99,7 @@ function clear() {
         document.getElementById("result-text").innerHTML = resultArrayStrNoComma;
     }
 }
+
 
 // function using eval() to calculate the string following press of equals
 function calculate () {
@@ -132,6 +136,7 @@ function calculate () {
     }
 }
 
+
 //add item to history list
 function addHistory(operation, result) {
     // create new paragraph element 
@@ -153,18 +158,20 @@ function addHistory(operation, result) {
     });
 
     //function to assess if scroll top to be displayed
-    displayScrollButton (idNum)
+    displayScrollButton (idNum);
 }
+
 
 function displayScrollButton (idNum) {
     if (idNum >= 4) {
         document.getElementById("scroll-top").style.removeProperty("display");
-        document.getElementById("scroll-top").style.display = "block"
+        document.getElementById("scroll-top").style.display = "block";
     } else if (idNum < 4) {
         document.getElementById("scroll-top").style.removeProperty("display");
-        document.getElementById("scroll-top").style.display = "none"
+        document.getElementById("scroll-top").style.display = "none";
     }
 }
+
 
 //function to return history item to calculator
 function returnToCalc(x) {
@@ -175,11 +182,13 @@ function returnToCalc(x) {
     clearAndAdd(operation);
 }
 
+
 //function to remove current on screen content of calculator and add new 
 function clearAndAdd (content) {
     document.getElementById("result-text").innerHTML = "";
     document.getElementById("result-text").innerHTML = content;
 }
+
 
 // searches for history item ID's and adds one to give unique id. 
 function getNextNum () {
@@ -190,6 +199,7 @@ function getNextNum () {
     var result = length + 1;
     return result;
 }
+
 
 // assess if two operands are togther and prevents input
 function operandAssesment (a) {
@@ -203,6 +213,7 @@ function operandAssesment (a) {
     }
 }
 
+
 // allows negative input after single operator 
 function negativeAssesment () {
     var results = document.getElementById("result-text").innerHTML;
@@ -214,6 +225,7 @@ function negativeAssesment () {
         addToCalc("-");
     }
 }
+
 
 // adds user input into the calculator screen
 function addToCalc(a) {
@@ -233,6 +245,7 @@ function addToCalc(a) {
     }
 }
 
+
 //checks number of items in display 
 function checkMaximum () {
     resultList = document.getElementById("result-text").innerHTML;
@@ -248,6 +261,7 @@ function checkMaximum () {
 
 }
 
+
 //check if a closing parentheis can be entered 
 function canClose () {
     var query = document.getElementById("result-text").innerHTML;
@@ -257,10 +271,12 @@ function canClose () {
     }
 }
 
+
 // dark mode event listener
 document.getElementById("dark-mode").addEventListener("click", function() {
     darkMode();
 });
+
 
 // adds all dark classes 
 function darkMode() {
@@ -314,13 +330,15 @@ function darkMode() {
     }
 }
 
+
 //scroll to top event listener
 // from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
 document.getElementById("scroll-top").addEventListener("click", function() {
     toTop();
 });
 
+
 function toTop() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-  }
+}
