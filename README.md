@@ -32,11 +32,11 @@ Situated at the top of the calculator is the calculator screen. It displays the 
 
 ### Calculator Buttons
 
-Below the screen, 20 buttons are located containing the numbers 0-9 and all simple operands including parentheses (brackets) and decimal points. The layout of the buttons was inspired by the Google Chrome calculator. The Numbers are coloured differently from the operators; dark grey instead of white. The special buttons such as clear, AC, and equal are also coloured differently; red and blue respectively. This change is more pronounced in light mode but more subtle in dark mode.
+Below the screen, 20 buttons are located containing the numbers 0-9 and all simple operands including parentheses (brackets) and decimal points. The layout of the buttons was inspired by the Google Chrome calculator. The Numbers are coloured differently from the operators; dark grey instead of white. The special buttons such as clear, AC, and equals are also coloured differently; red and blue respectively. This change is more pronounced in light mode but more subtle in dark mode.
 
 ### History
 
-Beneath the calculator there is a header with the text content ‘History’ and the button that says ‘Clear History’. Once the equal button is pressed if it does not return a syntax error the operation as well as the result will be displayed below the header. This aids user experiences; especially if multiple results are required and need to be stored for a brief period. It also helps if the answer is incorrect the user can retrace their steps and identify the error. Clicking the history item will return it to the calculator for the user to complete further operations.
+Beneath the calculator there is a header with the text content ‘History’ and the button that says ‘Clear History’. Once the equals button is pressed if it does not return a syntax error the operation as well as the result will be displayed below the header. This aids user experiences; especially if multiple results are required and need to be stored for a brief period. It also helps if the answer is incorrect the user can retrace their steps and identify the error. Clicking the history item will return it to the calculator for the user to complete further operations.
 
 Pressing the clear history button simply removes all history items from the list.
 
@@ -90,7 +90,7 @@ When dividing a positive number by 0 ‘Infinity’ will be returned, when divid
 
 ### Remove Undefined
 
-When pressing equal with no operation the result undefined would be provided to the user. Naturally, this would also populate the history area. This was removed such that pressing the equals key with no input would produce no results.
+When pressing equals with no operation the result undefined would be provided to the user. Naturally, this would also populate the history area. This was removed such that pressing the equals key with no input would produce no results.
 
 ### Prevent close parentheses first
 
@@ -102,7 +102,7 @@ It was noticed after deployment that if the user queried 0/0 the result from eva
 
 ### Prevent No Operation
 
-Without this, the user was able to press any number and the equal. This would produce a history entry of 3 = 3 or 4 = 4 or whatever number the user input. Whilst mathematically true there is no requirement for this to enter the history. It has therefore been removed. Now pressing any number and then the equal will not alter the history nor will it produce an error. The number entered will simply remain.
+Without this, the user was able to press any number and the equals. This would produce a history entry of 3 = 3 or 4 = 4 or whatever number the user input. Whilst mathematically true there is no requirement for this to enter the history. It has therefore been removed. Now pressing any number and then the equals will not alter the history nor will it produce an error. The number entered will simply remain.
 
 ## Validator testing
 
