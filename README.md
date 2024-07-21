@@ -27,7 +27,7 @@ Situated at the top of the calculator is the calculator screen. It displays the 
 
 
 ### Calculator Buttons
-Below the screen 20 buttons are located containing the numbers 0-9 and all simple operands including parentheses (brackets) and decimal point. The layout of the buttons was taken from the Google Chrome calculator. The Numbers are coloured differently from the operators which are once again coloured differently from the special buttons such as clear and equals. This change is more pronounced in lightmode but more subtle in dark mode. 
+Below the screen 20 buttons are located containing the numbers 0-9 and all simple operands including parentheses (brackets) and decimal point. The layout of the buttons was inspired by the Google Chrome calculator. The Numbers are coloured differently from the operators. The special buttons such as clear and equals are also coloured differently. This change is more pronounced in lightmode but more subtle in dark mode. 
 
 ### History
 Beneath the calculator there is a header with the text content ‘History’ and the button that says ‘Clear History’. Once the equals button is pressed if it does not return a syntax error the operation as well as the result will be displayed below the header. The aids user experience if multiple results are required and need to be stored for a brief period. It also helps if the answer is incorrect the user can retrace their steps and identify the error. Clicking the history item will return it to the calculator for the user to complete further operations.
@@ -134,3 +134,6 @@ https://www.google.com/search?q=calculator&rlz=1C1FKPE_en-GBGB931GB931&oq=calcul
 
 scroll to top button. 
 https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+
+Favicon
+https://icons8.com/icons/set/calculator
