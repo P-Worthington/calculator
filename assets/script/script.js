@@ -248,7 +248,7 @@ function addToCalc(a) {
 
 //checks number of items in display 
 function checkMaximum () {
-    resultList = document.getElementById("result-text").innerHTML;
+    var resultList = document.getElementById("result-text").innerHTML;
     var resultArray = resultList.split('');
     var length = resultArray.length;
     if (length <= 16) {
@@ -322,7 +322,7 @@ function darkMode() {
         e += 1;
     }
 
-    btnCur = document.getElementById("dark-mode").innerHTML;
+    var btnCur = document.getElementById("dark-mode").innerHTML;
     if (btnCur === "Dark Mode") {
         document.getElementById("dark-mode").innerHTML = "Light Mode";
     } else {
